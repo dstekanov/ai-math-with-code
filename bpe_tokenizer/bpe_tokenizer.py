@@ -16,7 +16,7 @@ class BPETokenizer:
     def merge_pair_if_present(self, indicies):
         for pair, new_index in self.params.merges.items():
             print("Pair: ", pair)
-            print("New indicies: ", new_index)
+            print("New index: ", new_index)
             indicies = self.merge(indicies, pair, new_index)
         return indicies
 
