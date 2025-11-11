@@ -190,11 +190,7 @@ def find_chunk_boundaries(
     # Make sure all boundaries are unique, but might be fewer than desired_num_chunks
     return sorted(set(chunk_boundaries))
 
-# -------------------------------
-# 3️⃣ Точка входу — код нижче виконується лише при запуску файлу напряму
-# -------------------------------
 if __name__ == "__main__":
-    # Вимірюємо час початку
     start_time = time.time()
 
     special_tokens = ["<|endoftext|>"]
@@ -209,6 +205,5 @@ if __name__ == "__main__":
     print("Vocab: ", result.vocab)
     print("Merges: ", result.merges)
 
-    # Виводимо час виконання
     print("Execution time:", round(time.time() - start_time, 3), "seconds")
 
